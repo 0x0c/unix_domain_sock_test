@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.15.2)
+project(stream_server)
+set(CMAKE_CXX_STANDARD 11)
+find_package(Boost 1.70.0 REQUIRED system)
+
+include_directories("${PROJECT_SOURCE_DIR}" "${Boost_INCLUDE_DIRS}")
+add_executable(stream_server stream_server.cpp)
+target_link_libraries(stream_server system)
